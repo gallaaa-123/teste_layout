@@ -17,7 +17,6 @@ var respondeu = obj_quiz_control.respondeu;
 var mx = device_mouse_x(0);
 var my = device_mouse_y(0);
 
-// Sempre use a mesma fonte e alinhamento
 draw_set_font(font_normal);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
@@ -27,8 +26,20 @@ for (var i = 0; i < array_length(alternativas); i++) {
 
     var is_hover = (mx >= base_x && mx <= base_x + 400 && my >= alt_y && my <= alt_y + spacing);
 
-    if (respondeu && i == selecionada) {
-        draw_set_color(i == resposta_certa ? c_lime : c_red); // verde se certo, vermelho se errado
+    if (respondeu) {
+        if (selecionada != resposta_certa) {
+            // Se errou, pinta selecionada em vermelho e a correta em verde
+            if (i == selecionada) {
+                draw_set_color(c_red);
+            } else if (i == resposta_certa) {
+                draw_set_color(c_lime);
+            } else {
+                draw_set_color(c_white);
+            }
+        } else {
+            // Se acertou, pinta só a selecionada em verde
+            draw_set_color(i == selecionada ? c_lime : c_white);
+        }
     } else if (is_hover && !respondeu) {
         draw_set_color(c_black);
     } else {
