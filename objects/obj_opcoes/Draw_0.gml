@@ -6,7 +6,7 @@ var font_hover = Font1;
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
-var margin_left = 350;
+var margin_left = 320;
 var margin_top = 405;
 var spacing = 40;
 

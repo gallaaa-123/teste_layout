@@ -1,14 +1,14 @@
 perguntas = [
-    "Qual a região do Brasil que inclui o Pará?",
+    "Qual a região do Brasil que inclui \no Pará?",
     "Qual a capital do Pará?",
-    "Atualmente, o Estado do Pará é o maior produtor \nnacional de:",
-    "Quais estados fazem limite com o Pará?",
-    "Qual o nome da maior feira aberta da América do \nSul que é localizada no Pará?",
-    "Qual era o nome da província do Pará?",
-    "Sobre o potencial econômico do Pará é INCORRETO \nafirmar que:",
-    "Quais são as cores da bandeira do Pará?",
-    "O relevo do Pará tem três influências. Quais que \nnão representam uma dessas 3 influências?",
-    "Qual município do estado do Pará é considerado o \nmaior do Brasil."
+    "Atualmente, o Estado do Pará é \no maior produtor nacional de:",
+    "Quais estados fazem limite com \no Pará?",
+    "Qual o nome da maior feira aberta \nda América do Sul que é localizada \nno Pará?",
+    "Qual era o nome da província \ndo Pará?",
+    "Sobre o potencial econômico do \nPará é INCORRETO afirmar que:",
+    "Quais são as cores da bandeira \ndo Pará?",
+    "O relevo do Pará tem três influências. \nQuais que não representam uma \ndessas 3 influências?",
+    "Qual município do estado do Pará \né considerado o maior do Brasil."
 ];
 
 alternativas = [
@@ -18,7 +18,7 @@ alternativas = [
     ["A - Acre e Ceará", "B - Amapá, Roraima, Amazonas, Mato Grosso, Tocantins e Maranhão", "C - Amazonas, Bahia, Brasília e Goiás", "D - Amazonas, Rondônia, Goiás, Maranhão e Amapá"],
     ["A - Ver-O-Peso", "B - Varejão da CEAGESP", "C - Mercadão de Madureira", "D - Feira do Largo da Ordem"],
     ["A - Província do Antigo Pará", "B - Belém", "C - Província de Belém", "D - Grão-Pará"],
-    ["A - Os principais cultivos no Pará são banana, cana-de-açúcar, mandioca, entre outros.", "B - Seu solo possui poucos recursos minerais, tendo uma mineração inexpressiva.", "C - Turismo está em constante expansão", "D - Tem a maior economia do Norte (maior PIB)."],
+    ["A - Seus principais cultivos são banana, cana-de-açúcar, entre outros.", "B - Seu solo possui poucos recursos minerais", "C - Turismo está em constante expansão", "D - Tem a maior economia do Norte (maior PIB)."],
     ["A - Branco e Azul", "B - Verde, Amarelo e Vermelho", "C - Azul, Vermelho e Branco", "D - Amarelo, Branco e Verde"],
     ["A - Planalto norte-amazônico", "B - Planície amazônica", "C - Planalto sul-amazônico", "D - Planalto sudeste-amazônico"],
     ["A - Almeirim.", "B - São Félix do Xingú.", "C - Altamira.", "D - Oriximiná."]
