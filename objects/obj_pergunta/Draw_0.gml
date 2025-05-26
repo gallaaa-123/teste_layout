@@ -9,8 +9,8 @@ if (!obj_quiz_control.respondeu) {
     var pergunta = obj_quiz_control.perguntas[obj_quiz_control.pergunta_atual];
 
     // Margens internas do balão
-    var margin_left = 96;
-    var margin_top = 260;
+    var margin_left = -15;
+    var margin_top = 180;
     var base_x = x - sprite_width / 2 + margin_left;
     var base_y = y - sprite_height / 2 + margin_top;
     draw_text(base_x, base_y, pergunta);
@@ -21,13 +21,13 @@ if (obj_quiz_control.respondeu) {
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
     draw_set_color(c_white);
-    draw_text(x, y - 10, obj_quiz_control.feedback);
+    draw_text(x + -70, y - 60, obj_quiz_control.feedback);
 
     // Botão "Avançar"
     var botao_w = 160;
     var botao_h = 40;
-    var botao_x = x + 110;
-    var botao_y = y + 20;
+    var botao_x = x + 50;
+    var botao_y = y + -25;
 
     // Salva a posição globalmente para o clique funcionar
     global.botao_x = botao_x;

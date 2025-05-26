@@ -7,7 +7,7 @@ perguntas = [
     "Qual era o nome da província \ndo Pará?",
     "Sobre o potencial econômico do \nPará é INCORRETO afirmar que:",
     "Quais são as cores da bandeira \ndo Pará?",
-    "O relevo do Pará tem três influências. \nQuais que não representam uma \ndessas 3 influências?",
+    "O relevo do Pará tem três influê\nncias. Quais que não representam \numa dessas 3 influências?",
     "Qual município do estado do Pará \né considerado o maior do Brasil."
 ];
 
