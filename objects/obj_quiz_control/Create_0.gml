@@ -26,8 +26,10 @@ alternativas = [
 
 respostas_certas = [3, 1, 3, 1, 0, 3, 1, 2, 3, 2];
 
-pergunta_atual = 0;
+// Inicializa variáveis do controle do quiz
+opcao_clicada = -1;  // Nenhuma opção selecionada
 respondeu = false;
+pergunta_atual = 0;
 alternativa_selecionada = -1;
 feedback = "";
-pulos_restantes = 3;
+pulos_restantes = 3;  // Exemplo inicial

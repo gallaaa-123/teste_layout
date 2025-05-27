@@ -1,3 +1,46 @@
+// Inicializa opcao_clicada se não existir
+if (!variable_instance_exists(id, "opcao_clicada")) {
+    opcao_clicada = -1;
+}
+
+// Verifica se o jogador clicou numa opção válida e ainda não respondeu
+if (!respondeu && opcao_clicada >= 0) {
+    alternativa_selecionada = opcao_clicada;
+
+    if (alternativa_selecionada == respostas_certas[pergunta_atual]) {
+        // Resposta correta: diminui vida do chefe
+        with (obj_coracao_chefe) {
+            vida_atual = max(0, vida_atual - 1);
+            show_debug_message("Correto! Vida do chefe: " + string(vida_atual));
+        }
+        feedback = "Correto!";
+    } else {
+        // Resposta errada: diminui vida do jogador
+        with (obj_coracao_jogador) {
+            vida_atual = max(0, vida_atual - 1);
+            show_debug_message("Errado! Vida do jogador: " + string(vida_atual));
+            if (vida_atual <= 0) {
+                show_debug_message("Jogador morreu. Encerrando o jogo.");
+                game_end();
+            }
+        }
+        feedback = "Errado!";
+    }
+
+    respondeu = true;
+    opcao_clicada = -1;
+
+    // Checa se já respondeu 5 perguntas para aumentar vida
+    if ((pergunta_atual + 1) % 5 == 0) {
+        var jogador = instance_find(obj_coracao_jogador, 0);
+        if (jogador != noone && jogador.vida_atual < jogador.vida_max) {
+            jogador.vida_atual += 1;
+            show_debug_message("Vida do jogador aumentou para: " + string(jogador.vida_atual));
+        }
+    }
+}
+
+// Avança para próxima pergunta ao clicar no botão avançar
 if (respondeu && mouse_check_button_pressed(mb_left)) {
     var mx = device_mouse_x(0);
     var my = device_mouse_y(0);
@@ -8,7 +51,6 @@ if (respondeu && mouse_check_button_pressed(mb_left)) {
         variable_global_exists("botao_h")) {
 
         if (point_in_rectangle(mx, my, global.botao_x, global.botao_y, global.botao_x + global.botao_w, global.botao_y + global.botao_h)) {
-            // Avança para a próxima pergunta
             pergunta_atual += 1;
             respondeu = false;
             alternativa_selecionada = -1;
