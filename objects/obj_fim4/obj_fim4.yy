@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_botao3",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_fim4",
+  "eventList":[],
   "managed":true,
-  "name":"obj_botao3",
+  "name":"obj_fim4",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"button_menu3",
-    "path":"sprites/button_menu3/button_menu3.yy",
+    "name":"fim_de_jogo4",
+    "path":"sprites/fim_de_jogo4/fim_de_jogo4.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -19,10 +19,6 @@ if (!respondeu && opcao_clicada >= 0) {
         with (obj_coracao_jogador) {
             vida_atual = max(0, vida_atual - 1);
             show_debug_message("Errado! Vida do jogador: " + string(vida_atual));
-            if (vida_atual <= 0) {
-                show_debug_message("Jogador morreu. Encerrando o jogo.");
-                game_end();
-            }
         }
         feedback = "Errado!";
     }
@@ -56,5 +52,31 @@ if (respondeu && mouse_check_button_pressed(mb_left)) {
             alternativa_selecionada = -1;
             feedback = "";
         }
+    }
+}
+
+// Detecta a fase atual
+var fase = floor(pergunta_atual / 5);
+
+// Verifica se o jogador perdeu (vida chegou a 0)
+if (instance_exists(obj_coracao_jogador)) {
+    if (obj_coracao_jogador.vida_atual <= 0) {
+        room_goto(Fim_de_jogo1); // Redireciona para a tela de derrota
+    }
+}
+
+// Verifica se todas as perguntas foram respondidas
+if (pergunta_atual >= 26) {
+    if (instance_exists(obj_coracao_chefe)) {
+        if (obj_coracao_chefe.vida_atual > 0) {
+            room_goto(Fim_de_jogo1); // Chefe ainda tem vida, jogador perdeu
+        } else {
+            room_goto(Fim_de_jogo2); // Chefe derrotado, jogador venceu
+        }
+    }
+} else {
+    // Se não respondeu todas as perguntas ainda, mas o chefe zerou a vida
+    if (instance_exists(obj_coracao_chefe) && obj_coracao_chefe.vida_atual <= 0) {
+        room_goto(Fim_de_jogo2); // Jogador venceu antes de acabar as perguntas
     }
 }
