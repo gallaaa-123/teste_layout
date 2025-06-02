@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"teste_personagem",
-    "path":"sprites/teste_personagem/teste_personagem.yy",
+    "name":"personagem",
+    "path":"sprites/personagem/personagem.yy",
   },
   "spriteMaskId":null,
   "visible":true,
