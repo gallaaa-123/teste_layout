@@ -1,40 +1,39 @@
 perguntas = [
-    //FASE 1
-	"Qual a região do Brasil que inclui \no Pará?",
+    // FASE 1
+    "Qual a região do Brasil que inclui no Pará?",
     "Qual município é a capital do Pará?",
-	"Qual o nome da maior feira aberta \nda América do Sul que é localizada \nno Pará?",
-	"Qual era o nome da província \ndo Pará?",
-	"Quantos estados brasileiros fazem \nparte da Amazônia Legal?",
-	
-	//FASE 2
-	"Quais as cores da bandeira do \nPará?",
-	"Qual país NÃO possui vegetação \nde Floresta Amazônica?",
-	"Qual o tipo climático predominante \nna Amazônia?",
-	"Você sabe onde fica o \n'Caribe da Amazônia'?",
-	"A cidade de Anajás, localizada \nno Estado do Pará, integra qual \nbioma brasileiro?",
-	
-	//FASE 3
-	"O relevo do Pará tem três \ninfluências. Qual NÃO representa \numa dessas 3 influências?",
-	"Assinale uma característica \nmarcante dos rios que formam a \nhidrografia amazônica.",
-	"Qual é um dos componentes funda\nmentais para a manutenção da \nfertilidade do solo da Floresta \nAmazônica?",
-	"As alternativas abaixo indicam \ncaracterísticas da vegetação \nda Floresta Amazônica, EXCETO:",
-	"Qual das combinações abaixo \nrepresenta culturas fortemente \nligadas à produção paraense e à \nexportação?",
-	
-	//FASE 4
-	"Quantos estados fazem fronteira \ncom o Pará e qual deles possui a \nmenor extensão de divisa terri\ntorial com ele?",
-	"Qual alternativa apresenta uma \ninformação INADEQUADA sobre as \ntransformações no setor primário \ne extrativista?",
-	"Sobre o município de Altamira, \nassinale a alternativa correta:",
-	"A Amazônia brasileira possui um \nelevado índice médio anual de chu\nvas. Qual é a principal causa \ndessas chuvas?",
-	"Qual alternativa descreve corre\ntamente um aspecto fundamental \ndo solo da Floresta Amazônica?",
-	
-	//FASE 5
-	"Qual alternativa apresenta uma \nespécie tradicionalmente associada \nà dieta amazônica e amplamente \nexplorada na região Norte \ndo Brasil?",
-	"No século XVII, os portugueses \nestenderam a conquista territorial \naté a foz do Rio Amazonas, e \ndepois para no interior, em \nfunção da coleta das drogas \ndo sertão e da:",
-	"Qual dos fatores abaixo é reconhe\ncido como o principal responsável \npelo avanço do desmatamento \nna região nas últimas décadas?",
-	"A Amazônia tem um peixe-elétrico \nque é capaz de acender lâmpadas. \nQual o nome dele?",
-	"A Ceiba pentandra, popularmente \nconhecida como sumaúma, pode ser \nclassificada morfologicamente \ncomo:",
-	"Dentre os fenômenos abaixo, qual \nmelhor explica o transporte de umi\ndade da bacia amazônica para \noutras regiões do Brasil, \ncontribuindo para o regime plu\nviométrico do Centro-Oeste \ne Sudeste?",
-	
+    "Qual o nome da maior feira aberta da América\ndo Sul localizada no Pará?",
+    "Qual era o nome da província do Pará?",
+    "Quantos estados brasileiros fazem parte da\nAmazônia Legal?",
+
+    // FASE 2
+    "Quais as cores da bandeira do Pará?",
+    "Qual país NÃO possui vegetação de Floresta\nAmazônica?",
+    "Qual o tipo climático predominante na Amazônia?",
+    "Você sabe onde fica o 'Caribe da Amazônia'?",
+    "A cidade de Anajás, localizada no Estado do\nPará, integra qual bioma brasileiro?",
+
+    // FASE 3
+    "O relevo do Pará tem três influências. Qual NÃO\nrepresenta uma dessas influências?",
+    "Assinale uma característica marcante dos rios\nque formam a hidrografia amazônica.",
+    "Qual é um dos componentes fundamentais para a\nmanutenção da fertilidade do solo da Floresta\nAmazônica?",
+    "As alternativas abaixo indicam características\nda vegetação da Floresta Amazônica, EXCETO:",
+    "Qual das combinações abaixo representa culturas\nfortemente ligadas à produção paraense e à\nexportação?",
+
+    // FASE 4
+    "Quantos estados fazem fronteira com o Pará e\nqual deles possui a menor extensão de divisa\nterritorial com ele?",
+    "Qual alternativa apresenta uma informação\nINADEQUADA sobre as transformações no setor\nprimário e extrativista?",
+    "Sobre o município de Altamira, assinale a\nalternativa correta:",
+    "A Amazônia brasileira possui um elevado índice\nmédio anual de chuvas. Qual é a principal causa\ndessas chuvas?",
+    "Qual alternativa descreve corretamente um\naspecto fundamental do solo da Floresta\nAmazônica?",
+
+    // FASE 5
+    "Qual alternativa apresenta uma espécie\ntradicionalmente associada à dieta amazônica e\namplamente explorada na região Norte do Brasil?",
+    "No século XVII, os portugueses estenderam a\nconquista territorial até a foz do Rio Amazonas\ne depois para o interior, em função da coleta das\ndrogas do sertão e da:",
+    "Qual dos fatores abaixo é reconhecido como o\nprincipal responsável pelo avanço do\ndesmatamento na região nas últimas décadas?",
+    "A Amazônia tem um peixe-elétrico que é capaz de\nacender lâmpadas. Qual o nome dele?",
+    "A Ceiba pentandra, popularmente conhecida como\nsumaúma, pode ser classificada morfologicamente\ncomo:",
+    "Dentre os fenômenos abaixo, qual melhor explica\no transporte de umidade da bacia amazônica para\noutras regiões do Brasil, contribuindo para o\nregime pluviométrico do Centro-Oeste e Sudeste?"
 ];
 
 alternativas = [
