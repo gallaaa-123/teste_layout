@@ -71,7 +71,7 @@ if (pergunta_atual >= 26) {
         if (obj_coracao_chefe.vida_atual > 0) {
             room_goto(Fim_de_jogo1); // Chefe ainda tem vida, jogador perdeu
         } else {
-            room_goto(Fim_de_jogo2); // Chefe derrotado, jogador venceu
+            room_goto(Fim_de_jogo3); // Chefe derrotado, jogador venceu
         }
     }
 } else {

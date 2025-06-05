@@ -10,10 +10,10 @@ if (!obj_quiz_control.respondeu) {
 
     // Margens internas do balão
     var margin_left = -48;
-    var margin_top = 168;
+    var margin_top = 184;
     var base_x = x - sprite_width / 2 + margin_left;
     var base_y = y - sprite_height / 2 + margin_top;
-	draw_set_font(FontMenor);
+	draw_set_font(Font1);
     draw_text(base_x, base_y, pergunta);
 }
 
