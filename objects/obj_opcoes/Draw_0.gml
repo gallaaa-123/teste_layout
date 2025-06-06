@@ -15,7 +15,7 @@ var base_y = y - sprite_height/2 + margin_top;
 
 var opcoes = [
     "Cartas",
-    "Charadas",
+    "Roleta",
     "Pular"
 ];
 
@@ -38,14 +38,23 @@ for (var i = 0; i < array_length(opcoes); i++) {
         draw_set_color(c_white);
     }
 
-    // Se for "Pular 3x", mostra quantos restam
     var texto = opcoes[i];
+
     if (texto == "Pular") {
-        var restantes = obj_quiz_control.pulos_restantes;
-        if (restantes > 0) {
-            texto += " " + string(restantes) + "x";
-        } else {
-            texto += ""; // Desabilitado visualmente
+        if (instance_exists(obj_quiz_control)) {
+            var restantes = obj_quiz_control.pulos_restantes;
+            if (restantes > 0) {
+                texto += " " + string(restantes) + "x";
+            }
+        }
+    }
+
+    if (texto == "Roleta") {
+        if (instance_exists(obj_quiz_control)) {
+            var restantes = obj_quiz_control.roletas_restantes;
+            if (restantes > 0) {
+                texto += " " + string(restantes) + "x";
+            }
         }
     }
 

@@ -1,10 +1,16 @@
 draw_self(); // Desenha o balão de fundo
 
+// Se não for para exibir a pergunta, não desenha nada além do fundo
+if (!obj_quiz_control.exibir_pergunta) {
+    exit;
+}
+
 draw_set_font(Font1);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_color(c_white);
 
+// Desenha a pergunta se ainda não respondeu
 if (!obj_quiz_control.respondeu) {
     var pergunta = obj_quiz_control.perguntas[obj_quiz_control.pergunta_atual];
 
@@ -13,7 +19,7 @@ if (!obj_quiz_control.respondeu) {
     var margin_top = 184;
     var base_x = x - sprite_width / 2 + margin_left;
     var base_y = y - sprite_height / 2 + margin_top;
-	draw_set_font(Font1);
+
     draw_text(base_x, base_y, pergunta);
 }
 

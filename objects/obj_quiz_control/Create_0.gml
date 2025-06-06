@@ -83,3 +83,5 @@ pergunta_atual = 0;
 alternativa_selecionada = -1;
 feedback = "";
 pulos_restantes = 3;  // Exemplo inicial
+roletas_restantes = 3;
+exibir_pergunta = true;
