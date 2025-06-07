@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_botao2",
+  "%Name":"obj_regra_seta_esquerda",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_botao2",
+  "name":"obj_regra_seta_esquerda",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"button_menu2",
-    "path":"sprites/button_menu2/button_menu2.yy",
+    "name":"regra_seta_esquerda",
+    "path":"sprites/regra_seta_esquerda/regra_seta_esquerda.yy",
   },
   "spriteMaskId":null,
   "visible":true,
