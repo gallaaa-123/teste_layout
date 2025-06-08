@@ -2,8 +2,8 @@ draw_self();
 
 var font_normal = Font1;
 
-var margin_left = 40;
-var margin_top = 388;
+var margin_left = 20;
+var margin_top = 25;
 var spacing = 40;
 
 var base_x = x - sprite_width / 2 + margin_left;

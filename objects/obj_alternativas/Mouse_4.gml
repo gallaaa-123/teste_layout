@@ -1,8 +1,8 @@
 if (instance_exists(obj_quiz_control)) {
     // Só permite clicar se ainda não respondeu
     if (!obj_quiz_control.respondeu) {
-        var base_x = x - sprite_width / 2 + 40;
-        var base_y = y - sprite_height / 2 + 388;
+        var base_x = x - sprite_width / 2 + 20;
+        var base_y = y - sprite_height / 2 + 25;
         var spacing = 40;
 
         for (var i = 0; i < 4; i++) {

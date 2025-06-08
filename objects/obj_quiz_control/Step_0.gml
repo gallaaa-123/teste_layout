@@ -3,7 +3,7 @@ if (!variable_instance_exists(id, "opcao_clicada")) {
     opcao_clicada = -1;
 }
 
-// Verifica se o jogador clicou numa opção válida e ainda não respondeu
+// Processa resposta se não respondeu e clicou numa opção válida
 if (!respondeu && opcao_clicada >= 0) {
     alternativa_selecionada = opcao_clicada;
 
@@ -26,7 +26,7 @@ if (!respondeu && opcao_clicada >= 0) {
     respondeu = true;
     opcao_clicada = -1;
 
-    // Checa se já respondeu 5 perguntas para aumentar vida
+    // Aumenta vida do jogador a cada 5 perguntas respondidas
     if ((pergunta_atual + 1) % 5 == 0) {
         var jogador = instance_find(obj_coracao_jogador, 0);
         if (jogador != noone && jogador.vida_atual < jogador.vida_max) {
@@ -51,32 +51,40 @@ if (respondeu && mouse_check_button_pressed(mb_left)) {
             respondeu = false;
             alternativa_selecionada = -1;
             feedback = "";
+            exibir_pergunta = true; // Caso queira garantir que a pergunta apareça
         }
     }
 }
 
-// Detecta a fase atual
+// Detecta a fase atual (opcional)
 var fase = floor(pergunta_atual / 5);
 
 // Verifica se o jogador perdeu (vida chegou a 0)
 if (instance_exists(obj_coracao_jogador)) {
     if (obj_coracao_jogador.vida_atual <= 0) {
-        room_goto(Fim_de_jogo1); // Redireciona para a tela de derrota
+        room_goto(Fim_de_jogo1); // Tela de derrota
     }
 }
 
-// Verifica se todas as perguntas foram respondidas
+// Verifica fim do jogo por número de perguntas ou vida do chefe
 if (pergunta_atual >= 26) {
     if (instance_exists(obj_coracao_chefe)) {
         if (obj_coracao_chefe.vida_atual > 0) {
-            room_goto(Fim_de_jogo1); // Chefe ainda tem vida, jogador perdeu
+            room_goto(Fim_de_jogo1); // Jogador perdeu
         } else {
-            room_goto(Fim_de_jogo3); // Chefe derrotado, jogador venceu
+            room_goto(Fim_de_jogo3); // Jogador venceu
         }
     }
 } else {
-    // Se não respondeu todas as perguntas ainda, mas o chefe zerou a vida
     if (instance_exists(obj_coracao_chefe) && obj_coracao_chefe.vida_atual <= 0) {
-        room_goto(Fim_de_jogo2); // Jogador venceu antes de acabar as perguntas
+        room_goto(Fim_de_jogo2); // Vitória antecipada do jogador
+    }
+}
+
+// Função para abrir as cartas (declare como script ou método da instância)
+function abrir_cartas() {
+    if (!instance_exists(obj_cartas_container)) {
+        exibir_pergunta = false;
+        instance_create_layer(630, 100, "Instances_1", obj_cartas_container);
     }
 }

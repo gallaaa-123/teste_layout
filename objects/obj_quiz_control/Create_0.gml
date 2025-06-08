@@ -76,12 +76,23 @@ alternativas = [
 
 respostas_certas = [3, 1, 0, 3, 3, 2, 0, 0, 3, 1, 2, 1, 0, 1, 3, 0, 3, 2, 1, 1, 2, 0, 0, 3, 2, 3];
 
-// Inicializa variáveis do controle do quiz
-opcao_clicada = -1;  // Nenhuma opção selecionada
+// Variáveis de controle
+opcao_clicada = -1;
 respondeu = false;
 pergunta_atual = 0;
 alternativa_selecionada = -1;
 feedback = "";
-pulos_restantes = 3;  // Exemplo inicial
+pulos_restantes = 3;
 roletas_restantes = 3;
+cartas_restantes = 3;
 exibir_pergunta = true;
+cartas_usadas = [false, false, false, false]; // 4 cartas, índice 0 não usado se quiser
+
+
+if (variable_global_exists("cartas_usadas")) {
+    for (var i = 0; i < array_length(global.cartas_usadas); i++) {
+        global.cartas_usadas[i] = false;
+    }
+} else {
+    global.cartas_usadas = array_create(5, false);
+}

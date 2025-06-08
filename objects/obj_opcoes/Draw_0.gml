@@ -6,8 +6,8 @@ var font_hover = Font1;
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
-var margin_left = 320;
-var margin_top = 405;
+var margin_left = 60;
+var margin_top = 40;
 var spacing = 40;
 
 var base_x = x - sprite_width/2 + margin_left;
@@ -52,6 +52,15 @@ for (var i = 0; i < array_length(opcoes); i++) {
     if (texto == "Roleta") {
         if (instance_exists(obj_quiz_control)) {
             var restantes = obj_quiz_control.roletas_restantes;
+            if (restantes > 0) {
+                texto += " " + string(restantes) + "x";
+            }
+        }
+    }
+
+    if (texto == "Cartas") {
+        if (instance_exists(obj_quiz_control)) {
+            var restantes = obj_quiz_control.cartas_restantes;
             if (restantes > 0) {
                 texto += " " + string(restantes) + "x";
             }

@@ -1,24 +1,20 @@
-// Posição e margem de clique das opções
-var margin_left = 350;
-var margin_top = 405;
-var spacing = 40;
-
-var base_x = x - sprite_width/2 + margin_left;
-var base_y = y - sprite_height/2 + margin_top;
-var altura_linha = spacing;
-
 var mx = device_mouse_x(0);
 var my = device_mouse_y(0);
 
+var base_x = x - sprite_width / 2 + 60;
+var base_y = y - sprite_height / 2 + 40;
+var spacing = 40;
+
 for (var i = 0; i < 3; i++) {
     var opt_y = base_y + i * spacing;
-
-    if (mx >= base_x && mx <= base_x + 300 && my >= opt_y && my <= opt_y + altura_linha) {
+    if (point_in_rectangle(mx, my, base_x, opt_y, base_x + 300, opt_y + spacing)) {
         switch (i) {
             case 0: // Cartas
-                if (!instance_exists(obj_cartas_container)) {
-                    instance_create_layer(room_width / 2, room_height / 2, "Instances_1", obj_cartas_container);
-                    obj_quiz_control.exibir_pergunta = false;
+                if (instance_exists(obj_quiz_control)) {
+                    if (obj_quiz_control.cartas_restantes > 0 && !instance_exists(obj_cartas_container)) {
+                        // Apenas abre o container, não diminui o contador aqui
+                        obj_quiz_control.abrir_cartas();
+                    }
                 }
                 break;
 

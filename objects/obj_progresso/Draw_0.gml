@@ -19,8 +19,8 @@ if (instance_exists(obj_quiz_control)) {
     var pos_y = y - sprite_height/2 + (sprite_height - altura_texto) / 2;
 
     // Ajuste fino para posicionar texto
-    pos_y += 80;
-    pos_x += 80;
+    pos_y += 0;
+    pos_x += 0;
 
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
@@ -33,8 +33,8 @@ else {
     var altura_texto = string_height(texto);
     var pos_x = x - sprite_width/2 + (sprite_width - largura_texto) / 2;
     var pos_y = y - sprite_height/2 + (sprite_height - altura_texto) / 2;
-    pos_y += 80;
-    pos_x += 80;
+    pos_y += 0;
+    pos_x += 0;
 
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
