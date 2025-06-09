@@ -88,3 +88,31 @@ function abrir_cartas() {
         instance_create_layer(630, 100, "Instances_1", obj_cartas_container);
     }
 }
+
+// Trocar música de acordo com a fase atual
+if (pergunta_atual < 5) {
+    if (!audio_is_playing(mus_fase1)) {
+        audio_stop_all();
+        audio_play_sound(mus_fase1, 1, true);
+    }
+} else if (pergunta_atual < 10) {
+    if (!audio_is_playing(mus_fase1)) {
+        audio_stop_all();
+        audio_play_sound(mus_fase1, 1, true);
+    }
+} else if (pergunta_atual < 15) {
+    if (!audio_is_playing(mus_fase2)) {
+        audio_stop_all();
+        audio_play_sound(mus_fase2, 1, true);
+    }
+} else if (pergunta_atual < 20) {
+    if (!audio_is_playing(mus_fase2)) {
+        audio_stop_all();
+        audio_play_sound(mus_fase2, 1, true);
+    }
+} else {
+    if (!audio_is_playing(mus_fase3)) {
+        audio_stop_all();
+        audio_play_sound(mus_fase3, 1, true);
+    }
+}

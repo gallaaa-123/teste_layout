@@ -96,3 +96,11 @@ if (variable_global_exists("cartas_usadas")) {
 } else {
     global.cartas_usadas = array_create(5, false);
 }
+
+if (!variable_global_exists("pergunta_atual")) {
+    global.pergunta_atual = 0;
+}
+
+if (!audio_is_playing(mus_fase1)) {
+    audio_play_sound(mus_fase1, 1, true);
+}

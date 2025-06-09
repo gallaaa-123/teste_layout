@@ -11,6 +11,7 @@
     {"name":"inst_6BB6E539","path":"rooms/Menu/Menu.yy",},
     {"name":"inst_19505FBD","path":"rooms/Menu/Menu.yy",},
     {"name":"inst_47FB33D3","path":"rooms/Menu/Menu.yy",},
+    {"name":"inst_56764DB6","path":"rooms/Menu/Menu.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -20,6 +21,7 @@
         {"$GMRInstance":"v2","%Name":"inst_6BB6E539","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6BB6E539","objectId":{"name":"obj_botao2","path":"objects/obj_botao2/obj_botao2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.33081704,"scaleY":0.29062057,"x":497.0,"y":501.0,},
         {"$GMRInstance":"v2","%Name":"inst_19505FBD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_19505FBD","objectId":{"name":"obj_botao3","path":"objects/obj_botao3/obj_botao3.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.32145333,"scaleY":0.2626728,"x":505.0,"y":576.0,},
         {"$GMRInstance":"v2","%Name":"inst_47FB33D3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_47FB33D3","objectId":{"name":"obj_botao4","path":"objects/obj_botao4/obj_botao4.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.18106394,"scaleY":0.1717634,"x":578.0,"y":660.0,},
+        {"$GMRInstance":"v2","%Name":"inst_56764DB6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_56764DB6","objectId":{"name":"obj_controlador_musica","path":"objects/obj_controlador_musica/obj_controlador_musica.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"spr_backgroundMenu","path":"sprites/spr_backgroundMenu/spr_backgroundMenu.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
