@@ -7,7 +7,7 @@ if (obj_quiz_control.respondeu) {
     var botao_h = 40;
 
     // Verifica se o mouse está dentro do botão e clicou
-    if (mouse_check_button_pressed(mb_left)) {
+    if (mouse_check_button_pressed(mb_left) and botao_x) {
         var mx = device_mouse_x(0);
         var my = device_mouse_y(0);
 
