@@ -1,43 +1,53 @@
-// Inicializa opcao_clicada se não existir
 if (!variable_instance_exists(id, "opcao_clicada")) {
     opcao_clicada = -1;
 }
 
-// Processa resposta se não respondeu e clicou numa opção válida
-if (!respondeu && opcao_clicada >= 0) {
+// Verifica transição de fase
+if (pergunta_atual == 5 || pergunta_atual == 10 || pergunta_atual == 15 || pergunta_atual == 20 || pergunta_atual == 25) {
+    if (fase_mostrada != pergunta_atual) {
+        mostrar_aviso_fase = true;
+        fase_mostrada = pergunta_atual;
+
+        if (instance_exists(obj_coracao_jogador)) {
+            with (obj_coracao_jogador) {
+                vida_atual += 1;
+            }
+        }
+    }
+}
+
+// Fecha modal de aviso de fase
+if (mostrar_aviso_fase && mouse_check_button_pressed(mb_left)) {
+    var mx = device_mouse_x(0);
+    var my = device_mouse_y(0);
+
+    if (point_in_rectangle(mx, my, botao_aviso_x, botao_aviso_y, botao_aviso_x + botao_aviso_w, botao_aviso_y + botao_aviso_h)) {
+        mostrar_aviso_fase = false;
+    }
+}
+
+// Respondeu?
+if (!respondeu && opcao_clicada >= 0 && !mostrar_aviso_fase) {
     alternativa_selecionada = opcao_clicada;
 
     if (alternativa_selecionada == respostas_certas[pergunta_atual]) {
-        // Resposta correta: diminui vida do chefe
         with (obj_coracao_chefe) {
             vida_atual = max(0, vida_atual - 1);
-            show_debug_message("Correto! Vida do chefe: " + string(vida_atual));
         }
         feedback = "Correto!";
     } else {
-        // Resposta errada: diminui vida do jogador
         with (obj_coracao_jogador) {
             vida_atual = max(0, vida_atual - 1);
-            show_debug_message("Errado! Vida do jogador: " + string(vida_atual));
         }
         feedback = "Errado!";
     }
 
     respondeu = true;
     opcao_clicada = -1;
-
-    // Aumenta vida do jogador a cada 5 perguntas respondidas
-    if ((pergunta_atual + 1) % 5 == 0) {
-        var jogador = instance_find(obj_coracao_jogador, 0);
-        if (jogador != noone && jogador.vida_atual < jogador.vida_max) {
-            jogador.vida_atual += 1;
-            show_debug_message("Vida do jogador aumentou para: " + string(jogador.vida_atual));
-        }
-    }
 }
 
-// Avança para próxima pergunta ao clicar no botão avançar
-if (respondeu && mouse_check_button_pressed(mb_left)) {
+// Botão de próxima pergunta
+if (respondeu && mouse_check_button_pressed(mb_left) && !mostrar_aviso_fase) {
     var mx = device_mouse_x(0);
     var my = device_mouse_y(0);
 
@@ -51,45 +61,30 @@ if (respondeu && mouse_check_button_pressed(mb_left)) {
             respondeu = false;
             alternativa_selecionada = -1;
             feedback = "";
-            exibir_pergunta = true; // Caso queira garantir que a pergunta apareça
+            exibir_pergunta = true;
         }
     }
 }
 
-// Detecta a fase atual (opcional)
-var fase = floor(pergunta_atual / 6);
-
-// Verifica se o jogador perdeu (vida chegou a 0)
-if (instance_exists(obj_coracao_jogador)) {
-    if (obj_coracao_jogador.vida_atual <= 0) {
-        room_goto(Fim_de_jogo1); // Tela de derrota
-    }
+// Derrota?
+if (instance_exists(obj_coracao_jogador) && obj_coracao_jogador.vida_atual <= 0) {
+    room_goto(Fim_de_jogo1);
 }
 
-// Verifica fim do jogo por número de perguntas ou vida do chefe
-if (pergunta_atual >= 31) {
+// Vitória?
+if (pergunta_atual >= 30) {
     if (instance_exists(obj_coracao_chefe)) {
         if (obj_coracao_chefe.vida_atual > 0) {
-            room_goto(Fim_de_jogo1); // Jogador perdeu
+            room_goto(Fim_de_jogo1);
         } else {
-            room_goto(Fim_de_jogo3); // Jogador venceu
+            room_goto(Fim_de_jogo3);
         }
     }
-} else {
-    if (instance_exists(obj_coracao_chefe) && obj_coracao_chefe.vida_atual <= 0) {
-        room_goto(Fim_de_jogo2); // Vitória antecipada do jogador
-    }
+} else if (instance_exists(obj_coracao_chefe) && obj_coracao_chefe.vida_atual <= 0) {
+    room_goto(Fim_de_jogo2);
 }
 
-// Função para abrir as cartas (declare como script ou método da instância)
-function abrir_cartas() {
-    if (!instance_exists(obj_cartas_container)) {
-        exibir_pergunta = false;
-        instance_create_layer(630, 100, "Instances_1", obj_cartas_container);
-    }
-}
-
-// Trocar música de acordo com a fase atual
+// Música por fase
 if (pergunta_atual < 5) {
     if (!audio_is_playing(mus_fase1)) {
         audio_stop_all();

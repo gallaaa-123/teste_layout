@@ -28,7 +28,7 @@ if (instance_exists(obj_quiz_control)) {
 }
 else {
     // Caso não tenha obj_quiz_control na room, mostra só o padrão
-    var texto = "01/26";
+    var texto = "01/31";
     var largura_texto = string_width(texto);
     var altura_texto = string_height(texto);
     var pos_x = x - sprite_width/2 + (sprite_width - largura_texto) / 2;

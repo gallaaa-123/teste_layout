@@ -6,7 +6,7 @@ if (room == Room1) {
         musica_desejada = mus_fase1;
     } else if (global.pergunta_atual >= 11 && global.pergunta_atual <= 20) {
         musica_desejada = mus_fase2;
-    } else if (global.pergunta_atual >= 21 && global.pergunta_atual <= 26) {
+    } else if (global.pergunta_atual >= 21 && global.pergunta_atual <= 30) {
         musica_desejada = mus_fase3;
     } else {
         musica_desejada = -1; // Nenhuma música se estiver fora da faixa

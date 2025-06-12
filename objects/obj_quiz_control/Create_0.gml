@@ -33,13 +33,12 @@ perguntas = [
     "Qual dos fatores abaixo é reconhecido como o\nprincipal responsável pelo avanço do\ndesmatamento na região nas últimas décadas?",
     "A Amazônia tem um peixe-elétrico que é capaz de\nacender lâmpadas. Qual o nome dele?",
     "A Ceiba pentandra, popularmente conhecida como\nsumaúma, pode ser classificada morfologicamente\ncomo:",
-    "Dentre os fenômenos abaixo, qual melhor explica\no transporte de umidade da bacia amazônica para\noutras regiões do Brasil, contribuindo para o\nregime pluviométrico do Centro-Oeste e Sudeste?",
 
     // FASE 6 (últimas 5)
     "Qual o colégio mais antigo do Brasil?",
     "Quantos dias a maniçoba fica pronta?",
-    "Marque a alternativa onde apresenta NENHUMA fruta nativa da região amazônica.",
-    "Como é conhecido o clássico confronto esportivo paraense?",
+    "Marque a alternativa onde apresenta NENHUMA \nfruta nativa da região amazônica.",
+    "Como é conhecido o clássico confronto \nesportivo paraense?",
     "Qual o nome do Estádio Olímpico do Pará?"
 ];
 
@@ -78,7 +77,6 @@ alternativas = [
     ["A - Fronteira agropecuária voltada à exportação", "B - Construção de ferrovias para transportar minérios", "C - Aumento de indústrias tecnológicas nas cidades da Amazônia", "D - Extração de carvão em regiões da Amazônia"],
     ["A - Pirarucu", "B - Puraruquê", "C - Pariquê", "D - Poraquê"],
     ["A - Angiosperma herbácea com porte rasteiro", "B - Frutífera perene de pequeno porte", "C - Árvore de grande porte e raízes tabulares", "D - Ave arborícola endêmica"],
-    ["A - Encontro das massas de ar frias do sul com massas tropicais", "B - Formação de ciclones extratropicais sobre o continente", "C - Condensação orográfica das massas polares", "D - Rios voadores gerados pela evaporação da floresta"],
 
     // FASE 6 (últimas 5)
     ["A - Colégio Loyola", "B - Colégio Santa Rosa", "C - Colégio Gentil Bittencourt", "D - Colégio Pedro II"],
@@ -88,9 +86,9 @@ alternativas = [
     ["A - Alfredão", "B - Baenão", "C - Curuzu", "D - Mangueirão"]
 ];
 
-respostas_certas  = [3, 1, 0, 3, 3, 2, 0, 0, 3, 1, 2, 1, 0, 1, 3, 0, 3, 2, 1, 1, 2, 0, 0, 3, 2, 3, 1, 0, 2, 0, 3];
+respostas_certas  = [3, 1, 0, 3, 3, 2, 0, 0, 3, 1, 2, 1, 0, 1, 3, 0, 3, 2, 1, 1, 2, 0, 0, 3, 2, 1, 0, 2, 0, 3];
 
-// Variáveis de controle
+// Controle
 opcao_clicada = -1;
 respondeu = false;
 pergunta_atual = 0;
@@ -100,8 +98,16 @@ pulos_restantes = 3;
 roletas_restantes = 3;
 cartas_restantes = 3;
 exibir_pergunta = true;
-cartas_usadas = [false, false, false, false]; // 4 cartas, índice 0 não usado se quiser
+fase_mostrada = -1;
+mostrar_aviso_fase = false;
+botao_aviso_x = 300;
+botao_aviso_y = 420;
+botao_aviso_w = 300;
+botao_aviso_h = 60;
+mostrar_modal_fase = false;
+fase_mostrada = -1;
 
+cartas_usadas = [false, false, false, false];
 
 if (variable_global_exists("cartas_usadas")) {
     for (var i = 0; i < array_length(global.cartas_usadas); i++) {
