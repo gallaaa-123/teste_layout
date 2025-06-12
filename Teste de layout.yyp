@@ -123,6 +123,7 @@
     {"id":{"name":"spr_background3","path":"sprites/spr_background3/spr_background3.yy",},},
     {"id":{"name":"spr_background4","path":"sprites/spr_background4/spr_background4.yy",},},
     {"id":{"name":"spr_background5","path":"sprites/spr_background5/spr_background5.yy",},},
+    {"id":{"name":"spr_background6","path":"sprites/spr_background6/spr_background6.yy",},},
     {"id":{"name":"spr_backgroundMenu","path":"sprites/spr_backgroundMenu/spr_backgroundMenu.yy",},},
     {"id":{"name":"spr_seta","path":"sprites/spr_seta/spr_seta.yy",},},
     {"id":{"name":"Sprite2","path":"sprites/Sprite2/Sprite2.yy",},},

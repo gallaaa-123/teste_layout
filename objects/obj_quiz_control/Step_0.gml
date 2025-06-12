@@ -57,7 +57,7 @@ if (respondeu && mouse_check_button_pressed(mb_left)) {
 }
 
 // Detecta a fase atual (opcional)
-var fase = floor(pergunta_atual / 5);
+var fase = floor(pergunta_atual / 6);
 
 // Verifica se o jogador perdeu (vida chegou a 0)
 if (instance_exists(obj_coracao_jogador)) {
@@ -67,7 +67,7 @@ if (instance_exists(obj_coracao_jogador)) {
 }
 
 // Verifica fim do jogo por número de perguntas ou vida do chefe
-if (pergunta_atual >= 26) {
+if (pergunta_atual >= 31) {
     if (instance_exists(obj_coracao_chefe)) {
         if (obj_coracao_chefe.vida_atual > 0) {
             room_goto(Fim_de_jogo1); // Jogador perdeu

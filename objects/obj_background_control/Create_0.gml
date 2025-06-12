@@ -4,5 +4,6 @@ global.bg_layers = [
     layer_get_id("background2"),
     layer_get_id("background3"),
     layer_get_id("background4"),
-    layer_get_id("background5")
+    layer_get_id("background5"),
+	layer_get_id("background6"),
 ];
