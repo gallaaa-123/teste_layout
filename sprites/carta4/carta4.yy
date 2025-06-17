@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"f04d2ede-54d6-43f1-9169-558b7a2d7722","name":"f04d2ede-54d6-43f1-9169-558b7a2d7722","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"e0c020dd-2473-49b7-a817-086cf4e24973","name":"e0c020dd-2473-49b7-a817-086cf4e24973","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":520,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"8570048e-a31c-4a83-a79b-35b97d0a74c8","blendMode":0,"displayName":"default","isLocked":false,"name":"8570048e-a31c-4a83-a79b-35b97d0a74c8","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"3c5969cf-24d8-4ed0-91e4-b63d5fed241e","blendMode":0,"displayName":"default","isLocked":false,"name":"3c5969cf-24d8-4ed0-91e4-b63d5fed241e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"carta4",
   "nineSlice":null,
@@ -71,8 +71,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f04d2ede-54d6-43f1-9169-558b7a2d7722","path":"sprites/carta4/carta4.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"56a9e076-3128-403e-9ec5-7cdba0534ad8","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e0c020dd-2473-49b7-a817-086cf4e24973","path":"sprites/carta4/carta4.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"fca04e1d-4b14-4933-b879-dab3973e434a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

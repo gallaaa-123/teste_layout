@@ -7,8 +7,8 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
 var margin_left = 60;
-var margin_top = 40;
-var spacing = 40;
+var margin_top = 45;
+var spacing = 50;
 
 var base_x = x - sprite_width/2 + margin_left;
 var base_y = y - sprite_height/2 + margin_top;

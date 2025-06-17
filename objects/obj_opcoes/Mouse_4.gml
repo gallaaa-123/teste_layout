@@ -3,7 +3,7 @@ var my = device_mouse_y(0);
 
 var base_x = x - sprite_width / 2 + 60;
 var base_y = y - sprite_height / 2 + 40;
-var spacing = 40;
+var spacing = 50;
 
 for (var i = 0; i < 3; i++) {
     var opt_y = base_y + i * spacing;

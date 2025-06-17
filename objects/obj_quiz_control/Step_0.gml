@@ -75,13 +75,20 @@ if (instance_exists(obj_coracao_jogador) && obj_coracao_jogador.vida_atual <= 0)
 if (pergunta_atual >= 30) {
     if (instance_exists(obj_coracao_chefe)) {
         if (obj_coracao_chefe.vida_atual > 0) {
-            room_goto(Fim_de_jogo1);
+            room_goto(Fim_de_jogo2);
         } else {
             room_goto(Fim_de_jogo3);
         }
     }
 } else if (instance_exists(obj_coracao_chefe) && obj_coracao_chefe.vida_atual <= 0) {
-    room_goto(Fim_de_jogo2);
+    room_goto(Fim_de_jogo3);
+}
+
+function abrir_cartas() {
+    if (!instance_exists(obj_cartas_container)) {
+        exibir_pergunta = false;
+        instance_create_layer(630, 100, "Instances_1", obj_cartas_container);
+    }
 }
 
 // Música por fase

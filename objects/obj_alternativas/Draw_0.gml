@@ -4,7 +4,7 @@ var font_normal = Font1;
 
 var margin_left = 20;
 var margin_top = 25;
-var spacing = 40;
+var spacing = 50;
 
 var base_x = x - sprite_width / 2 + margin_left;
 var base_y = y - sprite_height / 2 + margin_top;

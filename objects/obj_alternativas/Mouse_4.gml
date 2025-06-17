@@ -3,7 +3,7 @@ if (instance_exists(obj_quiz_control)) {
     if (!obj_quiz_control.respondeu) {
         var base_x = x - sprite_width / 2 + 20;
         var base_y = y - sprite_height / 2 + 25;
-        var spacing = 40;
+        var spacing = 50;
 
         for (var i = 0; i < 4; i++) {
             var alt_y = base_y + i * spacing;

@@ -8,8 +8,8 @@ if (mostrar_aviso_fase) {
     // Mensagem com quebra de linha
     var mensagem = "Parabéns! Você avançou de fase,\na dificuldade aumentou e você ganhou uma vida extra.";
     var texto_largura = string_width("a dificuldade aumentou e você ganhou uma vida extra."); // linha mais longa
-    var texto_altura = string_height("Parabéns!") * 2;
-    var centro_x = display_get_width() div 2;
+    var texto_altura = string_height("Parabéns!") * 8;
+    var centro_x = display_get_width() div 3;
     var centro_y = display_get_height() div 2;
 
     draw_set_color(c_white);
@@ -21,7 +21,7 @@ if (mostrar_aviso_fase) {
     var largura_botao = string_width(texto_botao) + padding_horizontal * 2;
     var altura_botao = string_height(texto_botao) + 10;
     var botao_x = centro_x - largura_botao div 2;
-    var botao_y = centro_y + 20;
+    var botao_y = centro_y + -150;
 
     // Desenhar botão
     draw_set_color(c_red);

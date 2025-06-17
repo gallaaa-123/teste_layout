@@ -17,8 +17,8 @@ if (obj_quiz_control.exibir_pergunta) {
     var padding_y = 24;
 
     // Posição base
-    var deslocamento = 200;  // quanto mover para a esquerda
-	var base_x = x - texto_w / 2 - padding_x / 2 - deslocamento;
+    var deslocamento = -100;  // quanto mover para a esquerda
+	var base_x = x - texto_w / 1.95 - padding_x / 1 - deslocamento;
 
     var base_y = y - texto_h / 2 - padding_y / 2;
 
@@ -38,10 +38,10 @@ if (obj_quiz_control.exibir_pergunta) {
 // Exibe feedback e botão "Avançar"
 if (obj_quiz_control.respondeu) {
     // Container vermelho (fundo da mensagem e botão)
-    var container_w = 320;  // Ajustei a largura
-    var container_h = 160;  // Ajustei a altura
+    var container_w = 260;  // Ajustei a largura
+    var container_h = 120;  // Ajustei a altura
     var container_x = x - container_w / 2;
-    var container_y = y - 80;
+    var container_y = y - 50;
 
     draw_set_color(make_color_rgb(197, 3, 3)); // vermelho
     draw_roundrect(container_x, container_y, container_x + container_w, container_y + container_h, false);
@@ -50,7 +50,7 @@ if (obj_quiz_control.respondeu) {
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
     draw_set_color(c_white);
-    draw_text(x, container_y + 40, obj_quiz_control.feedback);
+    draw_text(x, container_y + 20, obj_quiz_control.feedback);
 
     // Botão "Avançar" com fundo branco e texto preto
     var botao_w = 160;  // Ajustei a largura
