@@ -124,3 +124,7 @@ if (!variable_global_exists("pergunta_atual")) {
 if (!audio_is_playing(mus_fase1)) {
     audio_play_sound(mus_fase1, 1, true);
 }
+
+global.acertos = 0;
+global.erros = 0;
+global.tempo = 0;

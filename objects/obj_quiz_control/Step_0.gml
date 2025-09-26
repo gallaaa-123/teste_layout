@@ -35,11 +35,13 @@ if (!respondeu && opcao_clicada >= 0 && !mostrar_aviso_fase) {
             vida_atual = max(0, vida_atual - 1);
         }
         feedback = "Correto!";
+        global.acertos += 1;
     } else {
         with (obj_coracao_jogador) {
             vida_atual = max(0, vida_atual - 1);
         }
         feedback = "Errado!";
+        global.erros += 1;
     }
 
     respondeu = true;
@@ -66,24 +68,31 @@ if (respondeu && mouse_check_button_pressed(mb_left) && !mostrar_aviso_fase) {
     }
 }
 
-// Derrota?
+// Derrota
 if (instance_exists(obj_coracao_jogador) && obj_coracao_jogador.vida_atual <= 0) {
+    scr_add_to_leaderboard(global.nickname, global.acertos, global.erros, global.tempo);
     room_goto(Fim_de_jogo1);
 }
 
-// Vitória?
+// Vitória por responder tudo
 if (pergunta_atual >= 30) {
     if (instance_exists(obj_coracao_chefe)) {
         if (obj_coracao_chefe.vida_atual > 0) {
+            scr_add_to_leaderboard(global.nickname, global.acertos, global.erros, global.tempo);
             room_goto(Fim_de_jogo2);
         } else {
+            scr_add_to_leaderboard(global.nickname, global.acertos, global.erros, global.tempo);
             room_goto(Fim_de_jogo3);
         }
     }
-} else if (instance_exists(obj_coracao_chefe) && obj_coracao_chefe.vida_atual <= 0) {
+}
+// Vitória por zerar vida do chefe antes do fim
+else if (instance_exists(obj_coracao_chefe) && obj_coracao_chefe.vida_atual <= 0) {
+    scr_add_to_leaderboard(global.nickname, global.acertos, global.erros, global.tempo);
     room_goto(Fim_de_jogo3);
 }
 
+// Função para abrir cartas
 function abrir_cartas() {
     if (!instance_exists(obj_cartas_container)) {
         exibir_pergunta = false;
@@ -118,3 +127,6 @@ if (pergunta_atual < 5) {
         audio_play_sound(mus_fase3, 1, true);
     }
 }
+
+// Contagem de tempo
+global.tempo += 1 / room_speed;
